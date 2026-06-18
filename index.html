@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>DayGuesser</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrap">
+
+  <!-- SETUP -->
+  <section id="setup-screen" class="screen">
+    <h1 class="title">Day<span>Guesser</span></h1>
+    <p class="subtitle">Look at a date. Name its weekday. No peeking at a calendar.</p>
+
+    <form id="setup-form" class="setup-form">
+      <label for="count-input" class="field-label">How many dates?</label>
+      <input type="number" id="count-input" name="count" min="1" max="100" value="10" inputmode="numeric">
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="keep-coming">
+        <span>Keep it coming (don't stop at the count above)</span>
+      </label>
+
+      <button type="submit" class="btn btn-primary">Start</button>
+    </form>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz-screen" class="screen hidden">
+    <div class="hud">
+      <span class="hud-item">Q<span id="q-number">1</span></span>
+      <span class="hud-item score-pill"><span id="score-right">0</span> / <span id="score-total">0</span></span>
+    </div>
+
+    <div class="card" id="date-card">
+      <div class="card-holes"><span></span><span></span></div>
+      <div class="card-body">
+        <p class="card-eyebrow">What day of the week was</p>
+        <p class="card-date" id="date-display">—</p>
+      </div>
+      <div class="card-tear"></div>
+    </div>
+
+    <div class="day-grid" id="day-grid">
+      <!-- 7 buttons injected by JS -->
+    </div>
+
+    <p class="feedback" id="feedback" aria-live="polite"></p>
+
+    <button class="btn btn-primary hidden" id="next-btn">Next</button>
+    <button class="btn btn-ghost" id="stop-btn">End quiz</button>
+  </section>
+
+  <!-- END -->
+  <section id="end-screen" class="screen hidden">
+    <h2 class="title-sm">Final score</h2>
+    <p class="end-score"><span id="end-right">0</span> / <span id="end-total">0</span></p>
+    <p class="end-note" id="end-note"></p>
+    <button class="btn btn-primary" id="restart-btn">Play again</button>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
