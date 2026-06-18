@@ -24,6 +24,30 @@
         <span>Keep it coming (don't stop at the count above)</span>
       </label>
 
+      <details class="advanced" id="advanced-section">
+        <summary class="advanced-toggle">Year range <span class="range-badge" id="range-badge">1500 – 2199</span></summary>
+        <div class="chip-row">
+          <button type="button" class="chip active" data-from="1500" data-to="2199">Default<span>1500–2199</span></button>
+          <button type="button" class="chip" data-from="1900" data-to="2099">Modern<span>1900–2099</span></button>
+          <button type="button" class="chip" data-from="2000" data-to="2099">This century<span>2000–2099</span></button>
+          <button type="button" class="chip" data-custom="true">Custom<span>pick range</span></button>
+        </div>
+        <div class="custom-range hidden" id="custom-range">
+          <div class="range-inputs">
+            <div class="range-field">
+              <label for="year-from" class="field-label">From year</label>
+              <input type="number" id="year-from" min="1" max="9999" value="1500" inputmode="numeric">
+            </div>
+            <span class="range-dash">–</span>
+            <div class="range-field">
+              <label for="year-to" class="field-label">To year</label>
+              <input type="number" id="year-to" min="1" max="9999" value="2199" inputmode="numeric">
+            </div>
+          </div>
+          <p class="range-error hidden" id="range-error">Start year must be less than end year.</p>
+        </div>
+      </details>
+
       <button type="submit" class="btn btn-primary">Start</button>
     </form>
   </section>

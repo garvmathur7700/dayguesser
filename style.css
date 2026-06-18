@@ -114,6 +114,114 @@ html,body{
 }
 .btn-ghost:focus-visible{ outline: 2px solid var(--ink); }
 
+/* ---- Advanced / year range ---- */
+.advanced{
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card-bg);
+  padding: 0;
+}
+.advanced[open]{ padding-bottom: 14px; }
+
+.advanced-toggle{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  user-select: none;
+}
+.advanced-toggle::-webkit-details-marker{ display:none; }
+.advanced-toggle::after{
+  content: "▸";
+  font-size: 0.75rem;
+  color: var(--muted);
+  transition: transform 0.15s;
+}
+.advanced[open] .advanced-toggle::after{ transform: rotate(90deg); }
+
+.range-badge{
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.chip-row{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px 14px 4px;
+}
+.chip{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1.5px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.2;
+}
+.chip span{
+  font-size: 0.68rem;
+  font-weight: 400;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+}
+.chip.active{
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.chip.active span{ color: #aaa; }
+.chip:focus-visible{ outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.custom-range{
+  padding: 10px 14px 0;
+}
+.range-inputs{
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.range-field{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.range-field input{
+  font-size: 1rem;
+  font-family: "Courier New", monospace;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  width: 100%;
+}
+.range-field input:focus{ outline: 2px solid var(--ink); outline-offset: 1px; }
+.range-dash{
+  font-size: 1.2rem;
+  color: var(--muted);
+  padding-bottom: 10px;
+}
+.range-error{
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin: 6px 0 0;
+}
+
 /* ---- Quiz screen ---- */
 .hud{
   display:flex;
