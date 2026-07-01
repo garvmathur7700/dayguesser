@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const DAY_NAMES = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  const DAY_NAMES = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   const BATCH_SIZE = 10;
 
   // ---- Year range state ----
