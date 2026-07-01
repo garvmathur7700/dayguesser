@@ -77,7 +77,7 @@
   }
 
   function formatDate(d){
-    return d.toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" });
+    return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   }
 
   function buildDayButtons(){
