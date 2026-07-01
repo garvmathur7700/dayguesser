@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const DAY_NAMES = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const DAY_NAMES = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
   const BATCH_SIZE = 10;
 
   // ---- Year range state ----
@@ -77,7 +77,7 @@
   }
 
   function formatDate(d){
-    return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    return d.toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" });
   }
 
   function buildDayButtons(){
